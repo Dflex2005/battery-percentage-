@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box{
+    height: 80px;
+    width: 180px;
+    border: 3px solid gray;
+    border-radius: 10px;
+    position: relative;
+}
+
+.showp{
+    color: rgba(134, 134, 134, 0.863);
+    font-size: 50px;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+.percentage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+   border-radius: 6px;
+    top: 0;
+    left: 0;
+}
+
+
+
+.percentage.active{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+

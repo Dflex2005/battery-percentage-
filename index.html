@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery percentage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="showp">100</div>
+        <div class="percentage"></div>
+    </div>
+    
+
+    <script>
+        const perc = document.querySelector(".percentage");
+        const showp = document.querySelector(".showp");
+    
+        
+
+
+        let battery = 100;
+        function redb(){
+            
+           battery--;
+         
+         perc.style.width = `${battery}%`
+         showp.textContent = battery;  
+          
+            if(battery <= 98){
+                perc.classList.add("active")
+            } else{
+                perc.classList.remove("active")
+            }
+
+            if(battery === 20){
+                alert("Battery is low")
+            }
+            
+            if(battery <= 20){
+                perc.style.backgroundColor = "red";    
+            }
+
+            if(battery < 1){
+               
+                perc.style.backgroundColor = "white";
+                battery = 100;
+            }
+
+                 
+            
+        }
+        
+
+        setInterval(()=>{
+
+            redb()
+        },3000)
+    </script>
+</body>
+</html>
